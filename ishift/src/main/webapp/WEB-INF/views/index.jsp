@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,63 +27,9 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">ShopperHolic</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Portfolio
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-              <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-              <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-              <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-              <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-              <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-              <a class="dropdown-item" href="faq.html">FAQ</a>
-              <a class="dropdown-item" href="404.html">404</a>
-              <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <!-- include nav-bar -->	
+  <jsp:include page="/WEB-INF/views/include/nav_bar.jsp"></jsp:include>
+  
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -92,25 +39,16 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>First Slide</h3>
-            <p>This is a description for the first slide.</p>
-          </div>
+        <div class="carousel-item active" style="background-image: url('${pageContext.request.contextPath}/resources/imgs/main/shopperHolic_main_1.jpg')">
+          
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Second Slide</h3>
-            <p>This is a description for the second slide.</p>
-          </div>
+        <div class="carousel-item" style="background-image: url('${pageContext.request.contextPath}/resources/imgs/main/shopperHolic_main_2.jpg')">
+         
         </div>
         <!-- Slide Three - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Third Slide</h3>
-            <p>This is a description for the third slide.</p>
-          </div>
+        <div class="carousel-item" style="background-image: url('${pageContext.request.contextPath}/resources/imgs/main/shopperHolic_main_3.jpg')">
+          
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -127,164 +65,83 @@
   <!-- Page Content -->
   <div class="container">
 
-    <h1 class="my-4">Welcome to Modern Business</h1>
-
-    <!-- Marketing Icons Section -->
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
-
     <!-- Portfolio Section -->
-    <h2>Portfolio Heading</h2>
-
+    <h2>PRODUCT ITEM</h2>
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="${pageContext.request.contextPath }/resources/imgs/TOPS/shopperHolic_Tops_1.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project One</a>
+              <a href="#">데칼코마니 번 프린팅 티셔츠</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+            <p class="card-text">20,000 -> 15,900</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="${pageContext.request.contextPath }/resources/imgs/TOPS/shopperHolic_Tops_2.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Two</a>
+              <a href="#">포인트 오버핏 롱티셔츠</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p class="card-text">20,000 -> 17,900</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="${pageContext.request.contextPath }/resources/imgs/TOPS/shopperHolic_Tops_3.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Three</a>
+              <a href="#">베이직 스트라이프 티셔츠</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+            <p class="card-text">20,000 ->18,900</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="${pageContext.request.contextPath }/resources/imgs/PANTS/shopperHolic_Pants_1.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Four</a>
+              <a href="#">타탄 체크 팬츠</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p class="card-text">20000 -> 18000</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="${pageContext.request.contextPath }/resources/imgs/PANTS/shopperHolic_Pants_2.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Five</a>
+              <a href="#">린넨 9부 밴딩 팬츠</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p class="card-text">20000 -> 15000</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+          <a href="#"><img class="card-img-top" src="${pageContext.request.contextPath }/resources/imgs/PANTS/shopperHolic_Pants_3.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Six</a>
+              <a href="#">뉴 8부 라인 밴딩 팬츠</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+            <p class="card-text">20000 -> 10000</p>
           </div>
         </div>
       </div>
     </div>
     <!-- /.row -->
-
-    <!-- Features Section -->
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>Modern Business Features</h2>
-        <p>The Modern Business template by Start Bootstrap includes:</p>
-        <ul>
-          <li>
-            <strong>Bootstrap v4</strong>
-          </li>
-          <li>jQuery</li>
-          <li>Font Awesome</li>
-          <li>Working contact form with validation</li>
-          <li>Unstyled page elements for easy customization</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-      </div>
-      <div class="col-lg-6">
-        <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Call to Action Section -->
-    <div class="row mb-4">
-      <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-      </div>
-      <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-      </div>
-    </div>
 
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-    <!-- /.container -->
-    
-  </footer>
+  <!-- include footer -->
+  <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
 </body>
 
 </html>

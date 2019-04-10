@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Eagle's Join</title>
+<title>Join</title>
 	<!-- jquery -->
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
    
    <!-- Semantic UI -->
@@ -184,6 +185,136 @@
    	</div>
    	</div>
    	</div>
+   	
+   	<script>
+   	//중복 +유효성 검사+널값 function
+   		function duplicationCheck() {
+   			var userId=$("#userId").val();
+   			var check=/^[A-Za-z0-9]{4,12}$/g;
+   			
+   			if(userId=="") {
+   				alert("아이디를 입력해주세요");
+   				$("#userId").focus();
+   				return false();
+   			}
+   			else {
+   				if(!check.test(userId)) {
+   					alert("형식에 맞게 입력해주세요");
+   					$("#userId").val("");
+   					$("#userId").focus();
+   					return false();
+   				}
+   				else {
+   					$.ajax({
+   						type:"POST",
+   						data:{userId:userId},
+   						url:"duplicationCheck.me",
+   						success:function(data) {
+   							console.log(data);
+   							if(data>0) {
+   								alert("아이디가 존재합니다.다른 아이디를 입력해주세요");
+   							}else {
+   								var idCheckBtn=$("idCheckBtn").text("확인완료").attr("disabled",true);
+   								$("#userId").attr("readOnly",true);
+   								var idCkNum=$("#idCkNum").text(1);
+   							}
+   							
+   						},error :function(error) {
+   							
+   						}
+   						
+   					});
+   					return false;
+   					
+   					
+   				}
+   				
+   			}
+   			
+   		}
+   	
+   	
+   	</script>
+   	<script>
+   	function join() {
+   		
+   		var userPw=$("#userPwd").val();
+   		var userPwd2=$("#userPwd2").val();
+   		var userName=$("#userName").val();
+   		var phone=$("#phone").val(); 
+   		var email=$("#email").val();
+   		var idCheckBtn=$("#idCheckBtn").html();
+   		var emailCheckBtn=$("#emailCheckBtn").html();
+   		var emailConfirmBtn=$("#emailConfirmBtn").html();
+   		var sample5_address = $("#sample5_address").val();
+   		
+   		var userId=$("#userId").val();
+   		
+   		if(userId=="") {
+   			alert("아이디를 입력해주세요");
+   			$("#userId").focus();
+   			return false;
+   		}else if(idCheckBtn=='ID중복확인') {
+   			alert("아이디 중복확인을 해주세요");
+   			return false;
+   		}else if(userPwd=="") {
+   			alert("비밀번호를 입력해주세요");
+   			$("#userPwd").focus();
+   			return false;
+   		}else if(userPwd!=userPwd2) {
+   			alert("비밀번호가 일치하지 않습니다");
+   			$("#userPwd").focus();
+   			return false;
+   		}else if(userPwd2=="") {
+   			alert("비밀번호 확인을 해주세요");
+   			$("#userPwd2").focus();
+   			return false;
+   		}else if(userName=="") {
+   			alert("이름을 입력해주세요");
+   			$("#userName").focus();
+   			return false;
+   		}else if(phone=="") {
+   			
+   			alert("연락처를 입력해주세요");
+   			$("#phone").focus();
+   			return false;
+   		}else if(sample5_address=="") {
+   			alert("주소를 입력해줘");
+   			$("#address").focus();
+   			return false;
+   		}else if(email=="") {
+   			
+   			alert("주소를 입력해줘");
+   			$("#email").focus();
+   			return false;
+   			
+   		}else if(emailConfirmBtn =="확인") {
+   			alert("이메일 인증을 완료해주세야");
+   			$("#email").focus();
+   			return false;
+   		}
+   		
+   		
+   		
+   		
+   		
+   	}
+   	
+   	
+   	</script>
+   	<script>
+   		
+   	
+   	
+   	</script>
+   	
+   	
+   	
    	</body>
+ 
+ 
+ 
+ 
+ 
  
 </html>

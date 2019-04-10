@@ -66,7 +66,9 @@
   <div class="container">
 
     <!-- Portfolio Section -->
-    <h2>PRODUCT ITEM</h2>
+    <div class="product_title">
+    	<h2>PRODUCT ITEM</h2>
+    </div>
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">

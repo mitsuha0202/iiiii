@@ -22,30 +22,58 @@
 	<!-- include nav-bar -->
 	<jsp:include page="/WEB-INF/views/include/nav_bar.jsp"></jsp:include>
 
-	<div class="container" style="margin: 50px">
+	<div class="container m-auto">
 
-		<div class="path" style="text-align: right;">
-			<a href="../index">홈</a> > 마이 쇼핑
-		</div>
-		<div class="titleArea">
-			<h2>마이 쇼핑</h2>
+		<div class="m-auto">
+			<h2>My Shopping</h2>
 		</div>
 		<div>
-			<div class="container border" style="padding: 10px; height: 120px;">
-				<div style="display: inline; float: left;">
-					<img style="margin: 10px;" alt="일반 회원"
+			<!-- 인포 -->
+			<div class="container border p-3">
+				<div class="d-inline-block">
+					<img alt="일반 회원"
 						src="${pageContext.request.contextPath }/resources/imgs/mypage/img_member_default.gif">
 				</div>
-				<div class="container" style="margin-left: 10px">
-					<div style="margin-top: 10px">
-						저희 쇼핑몰을 이용해 주셔서 감사합니다. <strong style="color: blue">엄태원</strong> 님은
-						<strong style="color: black">[일반회원]</strong> 이십니다.
+				<div class="border-left d-inline-block ml-3">
+					<div class="pl-3">
+						저희 쇼핑몰을 이용해 주셔서 감사합니다. <strong class="text-primary">엄태원</strong> 님은
+						<strong class="text-dark">[일반회원]</strong> 이십니다.
 					</div>
 				</div>
 			</div>
-			<div class="container" style="margin-top: 20px">
-				<div class="row mb-3 align-items-start">
-					<div class="col-lg-4 col-sm-9">
+			
+			<!-- 사용자 정보 -->
+			<div class="container border mt-3 p-3">
+				<div class="row">
+					<div class="col">
+						<span>가용적립금액 : <strong class="text-primary">1,100원</strong></span>
+					</div>
+					<div class="col">
+						<span>총적립금액 : <strong class="text-dark">2,100원</strong></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<span>사용적립금액 : <strong class="text-dark">1,000원</strong></span>
+					</div>
+					<div class="col">
+						<span>예치금 : <strong class="text-dark">0원</strong></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<span>총주문 : <strong class="text-dark">18,900원(1회)</strong></span>
+					</div>
+					<div class="col">
+						<span>쿠폰 : <strong class="text-dark">0개</strong></span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 메뉴 -->
+			<div class="container border mt-3 p-3">
+				<div class="row mb-3">
+					<div class="col-lg-4 col-sm-6">
 						<div class="card h-100">
 							<div class="card-body" style="margin: auto;">
 								<h4 class="card-title">
@@ -54,7 +82,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-9">
+					<div class="col-lg-4 col-sm-6">
 						<div class="card h-100">
 							<div class="card-body" style="margin: auto;">
 								<h4 class="card-title">
@@ -73,8 +101,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="row mb-3 align-items-start">
-					<div class="col-lg-4 col-sm-9">
+				<div class="row mb-3">
+					<div class="col-lg-4 col-sm-6">
 						<div class="card h-100">
 							<div class="card-body" style="margin: auto;">
 								<h4 class="card-title">
@@ -83,7 +111,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-9">
+					<div class="col-lg-4 col-sm-6">
 						<div class="card h-100">
 							<div class="card-body" style="margin: auto;">
 								<h4 class="card-title">
@@ -92,7 +120,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-9">
+					<div class="col-lg-4 col-sm-6">
 						<div class="card h-100">
 							<div class="card-body" style="margin: auto;">
 								<h4 class="card-title">
@@ -102,8 +130,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="row mb-3 align-items-start">
-					<div class="col-lg-4 col-sm-9">
+				<div class="row">
+					<div class="col-lg-4 col-sm-6">
 						<div class="card h-100">
 							<div class="card-body" style="margin: auto;">
 								<h4 class="card-title">
@@ -112,7 +140,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-9">
+					<div class="col-lg-4 col-sm-6">
 						<div class="card h-100">
 							<div class="card-body" style="margin: auto;">
 								<h4 class="card-title">

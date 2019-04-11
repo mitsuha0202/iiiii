@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.card{
+	margin :20px 10px;
+	border : none !important;
+	float :left;
+}
+
+footer{
+	clear : both;
+}
